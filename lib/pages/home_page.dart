@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_widget/pages/badge_page.dart';
+import 'package:material_widget/pages/bottom_app_bar_page.dart';
 import 'package:material_widget/widgets/menu_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,8 +30,15 @@ class HomePage extends StatelessWidget {
                 },
               ),
               MenuItem(
-                title: 'Badge',
-                onPressed: () {},
+                title: 'Bottom app bar',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BottomAppBarPage(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
