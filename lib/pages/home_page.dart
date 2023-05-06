@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_widget/pages/all_buttons_page.dart';
 import 'package:material_widget/pages/badge_page.dart';
 import 'package:material_widget/pages/bottom_app_bar_page.dart';
 import 'package:material_widget/pages/bottom_sheets_page.dart';
@@ -48,6 +49,17 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const BottomSheetsPage(),
+                    ),
+                  );
+                },
+              ),
+              MenuItem(
+                title: 'All Buttons',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AllButtonsPage(),
                     ),
                   );
                 },
