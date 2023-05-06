@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_widget/pages/badge_page.dart';
 import 'package:material_widget/pages/bottom_app_bar_page.dart';
+import 'package:material_widget/pages/bottom_sheets_page.dart';
 import 'package:material_widget/widgets/menu_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -36,6 +37,17 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const BottomAppBarPage(),
+                    ),
+                  );
+                },
+              ),
+              MenuItem(
+                title: 'Bottom sheets',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BottomSheetsPage(),
                     ),
                   );
                 },
