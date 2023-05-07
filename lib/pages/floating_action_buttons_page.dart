@@ -52,34 +52,13 @@ class _FloatinActionButtonsPageState extends State<FloatinActionButtonsPage> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            backgroundColor: Coloors.floatinActionButtonsBgColor,
-            onPressed: () {},
-            child: const Icon(
-              Icons.star,
-              color: Colors.black,
-            ),
-          ),
-          const SizedBox(height: 24),
-          FloatingActionButton.extended(
-            label: const Text(
-              "Compose",
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
-            backgroundColor: Coloors.floatinActionButtonsPrimaryColor,
-            onPressed: () {},
-            icon: const Icon(
-              Icons.edit_outlined,
-              color: Colors.black,
-            ),
-          ),
-        ],
+      floatingActionButton: FloatingActionButton.large(
+        backgroundColor: Coloors.floatinActionButtonsPrimaryColor,
+        onPressed: () {},
+        child: const Icon(
+          Icons.edit_outlined,
+          color: Colors.black,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Coloors.floatinActionButtonsBgColor,
