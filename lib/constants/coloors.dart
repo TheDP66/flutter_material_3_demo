@@ -11,4 +11,8 @@ class Coloors {
   static const Color allButtonsBgColor = Color(0xFFf3f6ea);
   static const Color allButtonsPrimaryColor = Color(0xFF386a20);
   static const Color allButtonsSecondaryColor = Color(0xFFb8f397);
+
+  static const Color commonsButtonsBgColor = Color(0xFFf3f6ea);
+  static const Color commonsButtonsPrimaryColor = Color(0xFF386a20);
+  static const Color commonsButtonsSecondaryColor = Color(0xFFd9e7cb);
 }
