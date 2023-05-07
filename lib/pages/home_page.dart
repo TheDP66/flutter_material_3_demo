@@ -4,6 +4,7 @@ import 'package:material_widget/pages/badge_page.dart';
 import 'package:material_widget/pages/bottom_app_bar_page.dart';
 import 'package:material_widget/pages/bottom_sheets_page.dart';
 import 'package:material_widget/pages/commons_buttons_page.dart';
+import 'package:material_widget/pages/floating_action_buttons_page.dart';
 import 'package:material_widget/widgets/menu_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
                 },
               ),
               MenuItem(
-                title: 'All Buttons',
+                title: 'All buttons',
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -66,12 +67,23 @@ class HomePage extends StatelessWidget {
                 },
               ),
               MenuItem(
-                title: 'Common Buttons',
+                title: 'Common buttons',
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const CommonsButtonsPage(),
+                    ),
+                  );
+                },
+              ),
+              MenuItem(
+                title: 'Floating action buttons',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FloatinActionButtonsPage(),
                     ),
                   );
                 },

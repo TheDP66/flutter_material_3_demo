@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:moment_dart/moment_dart.dart';
 
@@ -11,6 +9,7 @@ class ChatItem extends StatelessWidget {
     required this.body,
     required this.image,
     required this.date,
+    this.notificationCount,
   });
 
   final String name;
@@ -18,6 +17,9 @@ class ChatItem extends StatelessWidget {
   final String body;
   final String image;
   final DateTime date;
+  final int? notificationCount;
+
+  static const badgeColor = Color(0xFFa8eff0);
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +28,30 @@ class ChatItem extends StatelessWidget {
         horizontal: 16,
         vertical: 4,
       ),
-      title: Text(
-        name,
-        style: const TextStyle(
-          fontWeight: FontWeight.w700,
-        ),
-      ),
+      title: notificationCount == null
+          ? Text(
+              name,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+              ),
+            )
+          : Row(
+              children: [
+                Text(
+                  name,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Badge.count(
+                  backgroundColor: badgeColor,
+                  textColor: Colors.black,
+                  alignment: AlignmentDirectional.centerEnd,
+                  count: notificationCount!,
+                )
+              ],
+            ),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
