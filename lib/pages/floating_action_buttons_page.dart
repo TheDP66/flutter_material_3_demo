@@ -25,14 +25,20 @@ class _FloatinActionButtonsPageState extends State<FloatinActionButtonsPage> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              const SearchBar(),
-              const SizedBox(height: 12),
-              const ImportantMessage(),
-              const SizedBox(height: 12),
-              Expanded(
-                child: ListView.builder(
+          child: SingleChildScrollView(
+            physics:
+                const AlwaysScrollableScrollPhysics(), // ? Important for scrolling
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const SearchBar(),
+                const SizedBox(height: 12),
+                const ImportantMessage(),
+                const SizedBox(height: 12),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics:
+                      const NeverScrollableScrollPhysics(), // ? Important for scrolling
                   itemCount: 15,
                   itemBuilder: (context, index) => ChatItem(
                     image: 'https://picsum.photos/id/${index + 10}/200/200',
@@ -46,8 +52,8 @@ class _FloatinActionButtonsPageState extends State<FloatinActionButtonsPage> {
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
