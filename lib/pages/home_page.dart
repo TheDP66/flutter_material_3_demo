@@ -4,6 +4,7 @@ import 'package:material_widget/pages/badge_page.dart';
 import 'package:material_widget/pages/bottom_app_bar_page.dart';
 import 'package:material_widget/pages/bottom_sheets_page.dart';
 import 'package:material_widget/pages/commons_buttons_page.dart';
+import 'package:material_widget/pages/extended_fab_page.dart';
 import 'package:material_widget/pages/floating_action_buttons_page.dart';
 import 'package:material_widget/widgets/menu_item.dart';
 
@@ -84,6 +85,17 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const FloatinActionButtonsPage(),
+                    ),
+                  );
+                },
+              ),
+              MenuItem(
+                title: 'Extended FAB',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExtendedFABPage(),
                     ),
                   );
                 },
