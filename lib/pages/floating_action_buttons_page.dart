@@ -70,7 +70,8 @@ class _FloatinActionButtonsPageState extends State<FloatinActionButtonsPage> {
         backgroundColor: Coloors.floatinActionButtonsBgColor,
         // type is important for implementing backgroundColor
         type: BottomNavigationBarType.fixed,
-        elevation: 0, showSelectedLabels: false,
+        elevation: 0,
+        showSelectedLabels: false,
         showUnselectedLabels: false,
         currentIndex: currentIndex,
         onTap: (value) {
