@@ -19,4 +19,8 @@ class Coloors {
   static const Color floatinActionButtonsBgColor = Color(0xFFf3f6ea);
   static const Color floatinActionButtonsPrimaryColor = Color(0xFFb7f397);
   static const Color floatinActionButtonsSecondaryColor = Color(0xFFd9e7cb);
+
+  static const Color iconButtonsBgColor = Color(0xFFfdfdf6);
+  static const Color iconButtonsPrimaryColor = Color(0xFFd9e7cb);
+  static const Color iconButtonsSecondaryColor = Color(0xFFebefe2);
 }
