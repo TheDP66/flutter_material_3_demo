@@ -23,4 +23,6 @@ class Coloors {
   static const Color iconButtonsBgColor = Color(0xFFfdfdf6);
   static const Color iconButtonsPrimaryColor = Color(0xFFd9e7cb);
   static const Color iconButtonsSecondaryColor = Color(0xFFebefe2);
+
+  static const Color segmentedButtonsSecondaryColor = Color(0xFFD9E7CB);
 }

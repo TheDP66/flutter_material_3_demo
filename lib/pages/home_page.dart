@@ -7,6 +7,7 @@ import 'package:material_widget/pages/commons_buttons_page.dart';
 import 'package:material_widget/pages/extended_fab_page.dart';
 import 'package:material_widget/pages/floating_action_buttons_page.dart';
 import 'package:material_widget/pages/icon_buttons_page.dart';
+import 'package:material_widget/pages/segmented_buttons_page.dart';
 import 'package:material_widget/widgets/menu_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -108,6 +109,17 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const IconButtonsPage(),
+                    ),
+                  );
+                },
+              ),
+              MenuItem(
+                title: 'Segmented Buttons',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SegmentedButtonsPage(),
                     ),
                   );
                 },
